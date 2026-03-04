@@ -161,7 +161,7 @@ SOL (native) and all SPL tokens in the wallet. The tool dynamically discovers ev
 Solana requires SOL to pay transaction fees. If your wallet has tokens but no SOL, the tool will tell you exactly how much SOL to send (usually under 0.01 SOL) and provide a Refresh button to retry after you deposit.
 
 **Q: Can I use a custom RPC endpoint?**
-Yes. Edit the `MAINNET_RPC` constant in `src/solana.ts` and rebuild.
+Yes. Click the gear icon in the top-right corner of the tool, paste your RPC URL, and click Save. No rebuilding required. The tool also includes multiple public RPC endpoints with automatic fallback.
 
 **Q: Is the deterministic nonce safe?**
 Yes. The nonce is derived as `SHA-512(scalar ‖ message) mod l` — the same pattern as RFC 8032 Ed25519, with the same determinism and replay safety guarantees.
