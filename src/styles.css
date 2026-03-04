@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #1A1817;
+    background: #FAF8F5;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer components {
+  /* -- Dark section (hero, nav, footer) -- */
+  .section-dark {
+    background: #000;
+    color: #fff;
+  }
+
+  /* -- Cream section (form area) -- */
+  .section-cream {
+    background: #FAF8F5;
+    color: #1A1817;
+  }
+
+  /* -- Inputs (cream context) -- */
+  .input-mnemonic {
+    @apply w-full border rounded-xl px-5 py-4
+           font-mono text-sm md:text-base
+           focus:outline-none focus:ring-1
+           transition-colors resize-none;
+    background: #FFFFFF;
+    color: #1A1817;
+    border-color: #E0DBD6;
+  }
+  .input-mnemonic::placeholder { color: #9A958F; }
+  .input-mnemonic:focus {
+    border-color: #1A1817;
+    --tw-ring-color: rgba(26, 24, 23, 0.1);
+  }
+
+  .input-address {
+    @apply w-full border rounded-xl px-5 py-4
+           font-mono text-sm md:text-base
+           focus:outline-none focus:ring-1
+           transition-colors;
+    background: #FFFFFF;
+    color: #1A1817;
+    border-color: #E0DBD6;
+  }
+  .input-address::placeholder { color: #9A958F; }
+  .input-address:focus {
+    border-color: #1A1817;
+    --tw-ring-color: rgba(26, 24, 23, 0.1);
+  }
+
+  /* -- Buttons (cream context) -- */
+  .btn-primary {
+    @apply w-full py-3.5 px-6 font-bold text-sm uppercase tracking-[0.1em]
+           disabled:opacity-40 disabled:cursor-not-allowed
+           transition-all flex items-center justify-center gap-2;
+    background: #1A1817;
+    color: #FFFFFF;
+    border-radius: 0;
+  }
+  .btn-primary:hover:not(:disabled) { opacity: 0.9; }
+
+  .btn-secondary {
+    @apply w-full py-3.5 px-6 font-bold text-sm uppercase tracking-[0.1em]
+           transition-all;
+    background: transparent;
+    color: #6B6560;
+    border: 1px solid #E0DBD6;
+    border-radius: 0;
+  }
+  .btn-secondary:hover {
+    background: #1A1817;
+    color: #FFFFFF;
+    border-color: #1A1817;
+  }
+
+  .btn-danger {
+    @apply w-full py-3.5 px-6 font-bold text-sm uppercase tracking-[0.1em]
+           disabled:opacity-40 disabled:cursor-not-allowed
+           transition-all flex items-center justify-center gap-2;
+    background: #dc2626;
+    color: #FFFFFF;
+    border-radius: 0;
+  }
+  .btn-danger:hover:not(:disabled) { opacity: 0.9; }
+
+  /* -- Cards (cream context) -- */
+  .card {
+    background: #FFFFFF;
+    border: 1px solid #E0DBD6;
+    @apply rounded-xl p-5;
+  }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.spinner svg {
+  animation: spin 1s linear infinite;
+}

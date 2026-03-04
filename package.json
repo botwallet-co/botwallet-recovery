@@ -1,0 +1,26 @@
+{
+  "name": "botwallet-recovery",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Standalone recovery tool for BotWallet FROST 2-of-2 threshold wallets",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.7",
+    "vite-plugin-singlefile": "^2.0.3"
+  },
+  "dependencies": {
+    "@noble/curves": "^1.8.1",
+    "@noble/hashes": "^1.7.1",
+    "@scure/bip39": "^1.5.4",
+    "@scure/base": "^1.2.4"
+  }
+}
